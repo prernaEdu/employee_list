@@ -1,0 +1,27 @@
+<div mat-dialog-title class="title">
+  <h1>Employee Form</h1>
+</div>
+<form [formGroup]="empForm" (ngSubmit)="onFormSubmit()" class="body">
+  <div mat-dialog-content class="content">
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput type="text" placeholder="Ex. John" formControlName="name" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput type="text" placeholder="Ex. john@gmail.com" formControlName="email" />
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field appearance="outline" style="display: flex; columns: 6;">
+        <mat-label>Mobile Number</mat-label>
+        <input matInput type="text" placeholder="Ex. 1234567891" formControlName="mobileNumber" />
+      </mat-form-field>
+    </div>
+  </div>
+  <div mat-dialog-actions class="button-container">
+    <button mat-flat-button color="warn" class="cancel-button" (click)="closeModel()">Cancel</button>
+    <button mat-flat-button color="primary" type="submit" class="save-button" (click)="onFormSubmit()">Save</button>
+  </div>
+</form>
