@@ -1,0 +1,40 @@
+<form [formGroup]="form" class="container mt-5" style="max-width: 400px;">
+    <fieldset class="border p-4 rounded">
+      <legend class="text-center">Login</legend>
+      
+      <div class="mb-3">
+        <label for="email" class="form-label">Email:</label>
+        <input 
+          type="email" 
+          class="form-control" 
+          id="email" 
+          formControlName="email" 
+          placeholder="Enter your email" 
+          required
+        >
+      </div>
+  
+      <div class="mb-3">
+        <label for="password" class="form-label">Password:</label>
+        <input 
+          type="password" 
+          class="form-control" 
+          id="password" 
+          formControlName="password" 
+          placeholder="Enter your password" 
+          required
+        >
+      </div>
+  
+      <div class="d-grid">
+        <button 
+          type="button" 
+          class="btn btn-primary" 
+          (click)="login()"
+        >
+          Login
+        </button>
+      </div>
+    </fieldset>
+  </form>
+  
